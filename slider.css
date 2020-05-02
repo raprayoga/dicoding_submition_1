@@ -1,0 +1,154 @@
+/* Awal Animasi Slider */
+.display{
+    opacity: 0;
+    position: absolute;
+    left: -2000px;
+}
+
+.gambar{
+    max-width: 1000px;
+    height: 300px;
+    left: 0;    
+    top: 0;
+    position: relative;
+    transition: 1.5s;;
+    margin: auto;
+}
+
+.slideKeKiri, .slideDiKanan{
+    position: absolute;
+    opacity: 0;
+}
+
+.slideKeKiri{
+    left: -1500px;
+}
+
+.slideDiKanan{
+    left: 1500px;
+}
+/* Akhir Anime Slide */
+
+
+/* Awal Desain Gambar Slider */
+.gambar-slider{ /*Container overflow*/
+    position: relative;
+    max-width: 1000px;
+    height: 300px;
+    margin: 300px auto 300px;
+    overflow: hidden;
+}
+
+.slider, .slider img, .diskon-satu, .diskon-tiga, .diskon-dua{
+    display: flex;
+}
+
+.slider{ /*Container Gambar Slider*/
+    height: 300px;
+    cursor: pointer;
+}
+
+.slider img{
+    width: 70%;
+    box-sizing: border-box;
+}
+
+.diskon-satu, .diskon-tiga, .diskon-dua{ /*Text pada slider*/
+    background-color: lightblue;
+    width: 30%;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Desain text slide pertama dan kedua */
+.diskon-satu h3, .diskon-dua span{
+    font-size: 60px;
+}
+.diskon-satu span{
+    font-size: 130px;
+}
+.diskon-satu p{
+    font-size: 20px;
+}
+.diskon-satu p span{
+    font-size: 8px;
+}
+
+.diskon-dua{
+    background-color: lightgoldenrodyellow;
+}
+.diskon-dua h3{
+    font-size: 30px;
+}
+
+/* Desain text slide ketiga dan keempat */
+.diskon-tiga{
+    max-width: 325px;
+}
+.diskon-tiga h3{
+    font-size: 50px;
+}
+.diskon-tiga p{
+    font-size: 20px;
+}
+.diskon-tiga p:nth-child(3){
+    font-size: 40px;
+    font-family: 'shadows_into_light';
+}
+.diskon-tiga span{
+    color: red;
+}
+
+.diskon-empat{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    padding: 100px 0 100px 0;
+    box-sizing: border-box;
+    background-color: lightgoldenrodyellow;
+}
+/* Akhir Slider */
+
+
+@media only screen and (max-width: 855px){
+    .display, .gambar-slider, .gambar, .slider{
+        height: 200px;
+    }
+    .gambar-slider{
+        margin: 200px auto 200px;
+    }
+
+    .diskon-satu h3, .diskon-dua span{
+        font-size: 40px;
+    }
+    .diskon-satu span{
+        font-size: 80px;
+    }
+    .diskon-satu p{
+        font-size: 12px;
+    }
+    .diskon-satu p span{
+        font-size: 5px;
+    }
+    .diskon-dua h3{
+        font-size: 15px;
+    }
+    
+    /* Desain text slide ketiga dan keempat */
+    .diskon-tiga h3{
+        font-size: 28px;
+    }
+    .diskon-tiga p{
+        font-size: 12px;
+    }
+    .diskon-tiga p:nth-child(3){
+        font-size: 24px;
+    }
+    .diskon-empat{
+        font-size: 28px;
+        padding: 75px 0 750px 0;
+    }
+}

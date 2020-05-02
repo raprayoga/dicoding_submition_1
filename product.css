@@ -1,0 +1,130 @@
+/* Awal Products */
+.container-products{
+    display: flex;
+    max-width: 1200px;
+    height: 500px;
+    margin-bottom: 200px;
+    justify-content: space-between;
+    padding: 0 10px 0 10px;
+    box-sizing: border-box;
+}
+
+/* Desain list */
+.product-list, .product-list ul, .product-list ul li{
+    display: flex;
+}
+
+.product-list{
+    width: 50%;
+}
+.product-list ul{
+    flex-direction: column;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+.product-list ul li{
+    width: 90%;
+    height: 10%;
+    background-color: white;
+    list-style: none;
+    align-items: center;
+    font-size: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 1px 0 10px 0 black;
+    cursor: pointer;
+    color: red;
+    transition: 300ms;
+    position: relative;
+}
+.product-list ul li div{
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    right: -20px;
+    transition: 300ms;
+}
+.product-list ul li:hover{
+    background-color: red;
+    color: white;
+    box-shadow: 2px 0 15px 1px red;
+}
+.product-list ul li:hover div{
+    background-color: black;
+    box-shadow: 2px 0 15px 1px black;
+}
+
+
+/* Desain tabel */
+.product-detail div{
+    box-shadow: 5px 10px 20px 5px red;
+    display: none;
+    animation: product-on 1s forwards;
+}
+.product-detail{
+    display: flex;
+    align-items: center;
+}
+.product-detail img{
+    max-width: 100px;
+}
+
+.product-detail table{
+    width: 100%;
+}
+
+.product-detail table td{
+    width: 130px;
+    height: 50px;
+    text-align: center;
+}
+
+.PC p, .game p{
+    font-size: 100px;
+    font-weight: 1000;
+    font-family: 'shadows_into_light';
+    text-shadow: 1px 1px 15px;
+    color: red;
+}
+
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+
+@keyframes product-on{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+@media only screen and (max-width: 855px){
+    .container-products{
+        flex-direction: column;
+        min-height: 500px;
+    }
+    .product-list{
+        width: 100%;
+    }
+    .product-list ul{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .product-list ul li{
+        width: 25%;
+        height: 40%;
+        margin: 10px;
+        font-size: 0.7em;
+    }
+    .product-detail{
+        justify-content: center;
+    }
+    .product-detail table td{
+        width: 200px;
+    }
+}

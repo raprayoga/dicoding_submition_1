@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+}
+
+
+/* Awal Navigasi */
+header{
+    width: 100%;
+    background-color: rgba(250, 250, 250, 0.849);
+    position: fixed;
+    z-index: 99;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+}
+
+.brand{
+    height: 100%;
+    font-family: 'shadows_into_light';
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.brand h1 a{
+    text-decoration: none;
+    color: black;
+}
+
+.brand span{
+    color: red;
+}
+
+.menu ul{
+    height: 50px;
+}
+
+.menu ul li{
+    display: inline-block;
+    margin-left: 5px;
+    height: 50px;
+    padding: 0 20px 0 20px;
+    line-height: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.menu ul li:hover {
+    background-color: black;
+    transition: 300ms;
+}
+
+.menu ul a li:hover{
+    color: red;
+    transition: 500ms;
+}
+/* Akhihr Navigasi */
+
+
+/* Awal Jumbotron */
+.jumbotron, .jumbotron img, .overlay{
+    width: 100%;
+}
+
+.jumbotron{
+    padding-top: 50px;
+    position: relative;
+    margin-bottom: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.jumbotron img{
+    box-sizing: border-box;
+}
+
+.overlay, .jumbotron h2, .jumbotron p{
+    position: absolute;
+}
+.overlay{
+    top: 0;
+    left: 0;
+    height: 100%;
+    opacity: .4;
+    background-color: white;
+}
+
+.jumbotron h2, .jumbotron p{
+    font-family: 'shadows_into_light';
+    font-weight: bolder;
+    z-index: 1;
+    top: 20%;
+    margin: 0 auto;
+    font-size: 150px;
+}
+
+.jumbotron p{
+    top: 55%;
+    font-size: 50px;
+    margin-top: 30px;
+}
+
+.jumbotron h2 span{
+    color: red;
+}
+/* Akhir Jumbotron */
+
+
+/* Words of Wisdom */
+article{
+    text-align: center;
+    margin-bottom: 200px;
+    color: grey;
+    background-color: rgba(238, 238, 238, 0.459)    ;
+}
+article q{
+    font-size: 50px;
+}
+/* Akhir Words of Wisdom */
+
+
+/* Awal Service */
+section:nth-child(5) h2{
+    text-align: center;
+    font-size: 40px;
+    color: grey;
+}
+
+section:nth-child(5){
+    background-color: rgba(238, 238, 238, 0.459);
+}
+
+.container-service{
+    height: 630px;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-around;
+    margin: 50px auto;
+}
+
+.container-service div{
+    width: 30%;
+    height: 70%;
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 5px 10px 20px 5px black;
+}
+
+.container-service img{
+    width: 80%;
+    text-align: center;
+    margin-bottom: 30%;
+}
+/* Akhhir Service */
+
+
+/* Awal Contact */
+.container-contact{
+    height: 227px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: grey;
+}
+
+.text h2{
+    font-size: 60px;
+}
+.text p{
+    font-size: 20px;
+}
+.number{
+    font-size: 40px;
+}
+/* Akhir Contact */
+
+
+footer{
+    width: 100%;
+    height: 50px;
+    background-color: grey;
+    margin-top: 50px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+
+/* Awal Aside */
+.container-aside{
+    width: 250px;
+    height: 500px;
+    background-color: grey;
+    opacity: .9;
+    position: fixed;
+    top: 50px;
+    right: 0;
+    z-index: 9999;
+    padding: 0 30px 0 30px;
+    text-align: justify;
+    display: none;
+    animation: aside-on 1s forwards;
+}
+
+.container-aside img{
+    width: 100px;
+    border-radius: 50%;
+}
+
+.container-aside img, .container-aside h2, .container-aside p{
+    opacity: 0;
+    animation: content-aside 500ms forwards;
+    animation-delay: 1s;
+}
+
+.aside-on{
+    display: block;
+}
+
+
+@keyframes aside-on{
+    0% {
+        width: 2px;
+        height: 5px;
+    }
+    50%{
+        width: 250px;
+        height: 5px;
+    }
+    100%{
+        width: 250px;
+        height: 500px;
+    }
+}
+
+@keyframes content-aside{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@font-face{
+    /* https://fonts.google.com/specimen/Shadows+Into+Light?selection.family=Shadows+Into+Light */
+    font-family: 'shadows_into_light'; 
+    src: url(asset/ShadowsIntoLight-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@media only screen and (max-width: 715px){
+    .container-contact{
+        flex-direction: column;
+    }
+    .jumbotron h2{
+        font-size: 120px;
+    }
+    .jumbotron p{
+        font-size: 40px;
+    }
+
+    .container-service{
+        flex-direction: column;
+    }
+    .container-service div{
+        flex-direction: row;
+        width: 100%;
+    }
+    .container-service div img{
+        margin-bottom: 0;
+        margin-right: 100px;
+        width: 40%;
+    }
+
+    .menu ul li{
+        padding: 20px 3px 0 3px;
+        box-sizing: border-box;
+        margin: 0;
+        font-size: 0.8em;
+        line-height: 10px;
+    }
+}
